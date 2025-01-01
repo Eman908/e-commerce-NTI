@@ -7,24 +7,18 @@ class ItemCardsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      spacing: 16,
-      children: [
-        Row(
-          spacing: 16,
-          children: [
-            ItemCard(m: itemCardList[0]),
-            ItemCard(m: itemCardList[1]),
-          ],
-        ),
-        Row(
-          spacing: 16,
-          children: [
-            ItemCard(m: itemCardList[0]),
-            ItemCard(m: itemCardList[1]),
-          ],
-        ),
-      ],
+    return GridView.count(
+      physics: BouncingScrollPhysics(),
+      crossAxisCount: 2,
+      mainAxisSpacing: 16,
+      crossAxisSpacing: 16,
+      childAspectRatio: 0.6,
+      children: List.generate(
+        itemCardList.length,
+        (index) {
+          return ItemCard(m: itemCardList[index]);
+        },
+      ),
     );
   }
 }

@@ -13,31 +13,34 @@ class SectionTitle extends StatelessWidget {
   final IconData? icon;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        InkWell(
-          child: Row(
-            children: [
-              Text(
-                option,
-                style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: ColorApp.colorPurple,
-                    fontWeight: FontWeight.bold),
-              ),
-              Icon(icon),
-            ],
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+                fontSize: SizeApp.s24,
+                color: ColorApp.colorPurple,
+                fontWeight: FontWeight.bold),
           ),
-        ),
-        Text(
-          title,
-          style: TextStyle(
-              fontSize: SizeApp.s24,
-              color: ColorApp.colorPurple,
-              fontWeight: FontWeight.bold),
-        ),
-      ],
+          InkWell(
+            child: Row(
+              children: [
+                Icon(icon),
+                Text(
+                  option,
+                  style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      color: ColorApp.colorPurple,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

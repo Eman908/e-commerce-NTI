@@ -8,16 +8,19 @@ class CategoryCardBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: categoryCardList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.only(left: 16),
-            child: CategoryCard(mc: categoryCardList[index]),
-          );
-        },
+      height: 80,
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: categoryCardList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: CategoryCard(mc: categoryCardList[index]),
+            );
+          },
+        ),
       ),
     );
   }

@@ -15,38 +15,27 @@ class ItemCard extends StatelessWidget {
   final ItemCardModel m;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-        height: 320,
-        decoration: boxDecoration(color: ColorApp.colorWhite, radius: 8),
-        child: Column(
-          children: [
-            Image.asset(
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+      decoration: boxDecoration(color: ColorApp.colorWhite, radius: 8),
+      child: Column(
+        spacing: 12,
+        children: [
+          Expanded(
+            child: Image.asset(
               m.image,
-              height: 120,
-              width: 120,
             ),
-            SizedBox(
-              height: 8,
-            ),
-            CardTitleText(
-              title: m.title,
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Rating(),
-            Price(
-              priceBefore: m.priceBefor,
-              priceAfter: m.priceAfter,
-            ),
-            Spacer(
-              flex: 1,
-            ),
-            CardActions()
-          ],
-        ),
+          ),
+          CardTitleText(
+            title: m.title,
+          ),
+          Rating(),
+          Price(
+            priceBefore: m.priceBefor,
+            priceAfter: m.priceAfter,
+          ),
+          CardActions()
+        ],
       ),
     );
   }
