@@ -14,11 +14,14 @@ class CardActions extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           AddToCartButton(
-            iconSize: 20,
-            textSize: 12,
-            padd: 8,
+            iconSize: 24,
+            textSize: 20,
+            padd: 12,
           ),
-          Icon(Icons.favorite_outline),
+          Icon(
+            Icons.favorite_outline,
+            size: 40,
+          ),
         ],
       ),
     );

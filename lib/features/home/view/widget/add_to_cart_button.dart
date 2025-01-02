@@ -4,11 +4,17 @@ import 'package:flutter/material.dart';
 class AddToCartButton extends StatelessWidget {
   const AddToCartButton({
     super.key,
+    required this.iconSize,
+    required this.textSize,
+    required this.padd,
   });
-
+  final double iconSize;
+  final double textSize;
+  final double padd;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      padding: EdgeInsets.all(padd),
       onPressed: () {},
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
@@ -17,14 +23,14 @@ class AddToCartButton extends StatelessWidget {
       child: Row(
         spacing: 4,
         children: [
+          Text(
+            'اضافة الي السلة',
+            style: TextStyle(color: Colors.white, fontSize: textSize),
+          ),
           Icon(
             Icons.shopping_cart_outlined,
             color: Colors.white,
-            size: 15,
-          ),
-          Text(
-            'اضافة الي السلة',
-            style: TextStyle(color: Colors.white, fontSize: 12),
+            size: iconSize,
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:e_commerce/core/style/box_decoration.dart';
 import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/core/style/size_app.dart';
 import 'package:e_commerce/features/home/view/model/item_card_model.dart';
 import 'package:e_commerce/features/home/view/widget/card_actions.dart';
 import 'package:e_commerce/features/home/view/widget/card_title.dart';
@@ -33,6 +34,7 @@ class ItemCard extends StatelessWidget {
           Price(
             priceBefore: m.priceBefor,
             priceAfter: m.priceAfter,
+            size: SizeApp.s16,
           ),
           CardActions()
         ],

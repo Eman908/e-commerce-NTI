@@ -12,6 +12,7 @@ class FloatingButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         FloatingActionButton(
+          heroTag: 'upload',
           onPressed: () {},
           backgroundColor: Colors.grey,
           shape: RoundedRectangleBorder(
@@ -24,6 +25,7 @@ class FloatingButton extends StatelessWidget {
         ),
         SizedBox(height: 16),
         FloatingActionButton(
+          heroTag: 'whatsApp',
           onPressed: () {},
           backgroundColor: Colors.green,
           shape: RoundedRectangleBorder(

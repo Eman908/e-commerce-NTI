@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         HomeTestCubit cubit = BlocProvider.of(context);
 
         return Scaffold(
-          appBar: homeAppBar(),
+          appBar: homeAppBar(title: 'تطبيق منتجات'),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: SizeApp.s16,
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SectionTitle(title: 'المنتجات', option: '', icon: Icons.tune),
                   SizedBox(
-                    height: 400,
+                    height: 600,
                     child: ItemCardsGrid(),
                   ),
                 ],

@@ -3,8 +3,9 @@ class ItemCardModel {
   final String title;
   final String priceBefor;
   final String priceAfter;
+  final String? details;
 
-  ItemCardModel(
+  ItemCardModel(this.details,
       {required this.image,
       required this.priceAfter,
       required this.priceBefor,

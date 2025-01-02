@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/core/style/size_app.dart';
 import 'package:flutter/material.dart';
 
 class Price extends StatelessWidget {
@@ -6,17 +7,15 @@ class Price extends StatelessWidget {
     super.key,
     required this.priceBefore,
     required this.priceAfter,
-    required this.size,
   });
   final String priceBefore;
   final String priceAfter;
-  final double size;
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 10,
         children: [
           Text(
@@ -24,12 +23,12 @@ class Price extends StatelessWidget {
             style: TextStyle(
                 color: ColorApp.colorPink,
                 fontWeight: FontWeight.bold,
-                fontSize: size),
+                fontSize: SizeApp.s20),
           ),
           Text(
             priceBefore,
             style: TextStyle(
-                decoration: TextDecoration.lineThrough, fontSize: size),
+                decoration: TextDecoration.lineThrough, fontSize: SizeApp.s16),
           ),
         ],
       ),
