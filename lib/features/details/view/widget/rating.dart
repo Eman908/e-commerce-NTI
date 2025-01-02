@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/core/style/string_app.dart';
 import 'package:flutter/material.dart';
 
 class Rating extends StatelessWidget {
@@ -40,7 +41,7 @@ class Rating extends StatelessWidget {
           ],
         ),
         Text(
-          "22 تقييم",
+          StringApp.ratingText,
           style: TextStyle(
             decoration: TextDecoration.underline,
           ),

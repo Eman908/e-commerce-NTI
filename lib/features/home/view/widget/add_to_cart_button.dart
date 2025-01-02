@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/core/style/string_app.dart';
 import 'package:flutter/material.dart';
 
 class AddToCartButton extends StatelessWidget {
@@ -24,12 +25,12 @@ class AddToCartButton extends StatelessWidget {
         spacing: 4,
         children: [
           Text(
-            'اضافة الي السلة',
-            style: TextStyle(color: Colors.white, fontSize: textSize),
+            StringApp.addToCart,
+            style: TextStyle(color: ColorApp.colorWhite, fontSize: textSize),
           ),
           Icon(
             Icons.shopping_cart_outlined,
-            color: Colors.white,
+            color: ColorApp.colorWhite,
             size: iconSize,
           ),
         ],

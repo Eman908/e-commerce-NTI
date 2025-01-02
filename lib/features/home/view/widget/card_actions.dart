@@ -1,11 +1,14 @@
+import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/features/home/cubit/home_test_cubit.dart';
 import 'package:e_commerce/features/home/view/widget/add_to_cart_button.dart';
 import 'package:flutter/material.dart';
 
 class CardActions extends StatelessWidget {
   const CardActions({
     super.key,
+    required this.cubit,
   });
-
+  final HomeTestCubit cubit;
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -18,7 +21,14 @@ class CardActions extends StatelessWidget {
             textSize: 12,
             padd: 8,
           ),
-          Icon(Icons.favorite_outline),
+          InkWell(
+              // onTap: () {
+              //   cubit.changeIcon();
+              // },
+              child: Icon(
+            Icons.favorite_border,
+            color: ColorApp.colorPink,
+          )),
         ],
       ),
     );

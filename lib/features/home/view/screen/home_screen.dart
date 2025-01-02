@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/style/size_app.dart';
+import 'package:e_commerce/core/style/string_app.dart';
 import 'package:e_commerce/core/widget/app_bar.dart';
 import 'package:e_commerce/core/widget/bottom_bar.dart';
 import 'package:e_commerce/core/widget/floationg_bottom.dart';
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         HomeTestCubit cubit = BlocProvider.of(context);
 
         return Scaffold(
-          appBar: homeAppBar(title: 'تطبيق منتجات'),
+          appBar: homeAppBar(title: StringApp.titleHome),
           body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: SizeApp.s16,
@@ -36,18 +37,21 @@ class HomeScreen extends StatelessWidget {
                   Header(),
                   Circles(),
                   SectionTitle(
-                    title: 'الأقسام',
-                    option: 'كل الأقسام',
+                    title: StringApp.department,
+                    option: StringApp.allDepartment,
                     icon: null,
                   ),
                   CategoryCardBuilder(),
                   SizedBox(
                     height: SizeApp.s7,
                   ),
-                  SectionTitle(title: 'المنتجات', option: '', icon: Icons.tune),
+                  SectionTitle(
+                      title: StringApp.products, option: '', icon: Icons.tune),
                   SizedBox(
                     height: 600,
-                    child: ItemCardsGrid(),
+                    child: ItemCardsGrid(
+                      cubit: cubit,
+                    ),
                   ),
                 ],
               ),

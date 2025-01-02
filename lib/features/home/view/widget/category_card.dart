@@ -1,7 +1,7 @@
-import 'package:e_commerce/core/style/box_decoration.dart';
+import 'package:e_commerce/core/widget/box_decoration.dart';
 import 'package:e_commerce/core/style/color_app.dart';
 import 'package:e_commerce/core/style/size_app.dart';
-import 'package:e_commerce/features/home/view/model/category_card_model.dart';
+import 'package:e_commerce/features/home/model/category_card_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {

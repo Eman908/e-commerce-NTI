@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/style/image_app.dart';
 import 'package:e_commerce/core/style/size_app.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ class Header extends StatelessWidget {
         image: DecorationImage(
           fit: BoxFit.fitWidth,
           image: AssetImage(
-            'assets/image 1.png',
+            ImageApp.imageHeader,
           ),
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:e_commerce/core/style/color_app.dart';
+import 'package:e_commerce/core/style/string_app.dart';
 import 'package:e_commerce/features/home/cubit/home_test_cubit.dart';
 import 'package:flutter/material.dart';
 
@@ -26,23 +27,23 @@ class BottomBar extends StatelessWidget {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'الرئيسية',
+            label: StringApp.bottomBarHome,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
-            label: 'الأقسام',
+            label: StringApp.bottomBarDepatement,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
-            label: 'السلة',
+            label: StringApp.bottomBarCart,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'المضلة',
+            label: StringApp.bottomBarFavorite,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.more_horiz),
-            label: 'المزيد',
+            label: StringApp.bottomBarMore,
           )
         ],
       ),

@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/home/view/model/item_card_model.dart';
+import 'package:e_commerce/features/home/model/item_card_model.dart';
 
 List<ItemCardModel> itemCardList = [
   ItemCardModel(
